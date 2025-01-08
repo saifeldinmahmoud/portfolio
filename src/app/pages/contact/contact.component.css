@@ -1,0 +1,199 @@
+/* Contact Section Styles */
+.contact-section {
+    background: linear-gradient(135deg, #ff7f50, #ff6347, #ffd700);
+    /* خلفية متدرجة */
+    padding: 60px 20px;
+    text-align: center;
+    color: #fff;
+    animation: backgroundChange 5s infinite alternate;
+}
+
+/* Animation for Background Color Change */
+@keyframes backgroundChange {
+    0% {
+        background: linear-gradient(135deg, #ff7f50, #ff6347, #ffd700);
+    }
+
+    50% {
+        background: linear-gradient(135deg, #ff1493, #8a2be2, #ff6347);
+    }
+
+    100% {
+        background: linear-gradient(135deg, #00bfff, #00ff7f, #f0e68c);
+    }
+}
+
+/* Alerts Styling */
+.alert {
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: alertAnimation 1s forwards;
+}
+
+/* Alert Animation */
+@keyframes alertAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Form Styling */
+.contact-section form {
+    background-color: rgba(255, 255, 255, 0.75);
+    /* خلفية شفافة بنسبة 75% */
+    padding: 40px;
+    border-radius: 8px;
+    /* الحواف مدورة */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+    opacity: 0;
+    animation: formFadeIn 1s forwards;
+    border: 1px solid #ced4da;
+}
+
+/* Form Heading */
+.contact-section h2 {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #fff;
+    /* اللون الأبيض */
+    margin-bottom: 20px;
+}
+
+/* Form Description */
+.contact-section p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #fff;
+    /* اللون الأبيض */
+}
+
+/* Form Input Styling */
+.contact-section .form-group label {
+    font-weight: 600;
+    color: #181818;
+    /* اللون الأبيض */
+    margin-bottom: 8px;
+}
+
+.contact-section .form-control {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 1.1rem;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    /* الحواف مدورة */
+    background: rgba(255, 255, 255, 0.75);
+    /* خلفية شفافة بنسبة 75% */
+    color: #333;
+    transition: border-color 0.3s ease;
+}
+
+.contact-section .form-control:focus {
+    border-color: #007bff;
+    outline: none;
+    background: rgba(255, 255, 255, 0.85);
+    /* جعل الخلفية أكثر وضوحًا عند التحديد */
+}
+
+/* Form Button Styling */
+.contact-section .btn-primary {
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    margin: 20px auto 0;
+    padding: 12px 20px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 8px;
+    /* الحواف مدورة */
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.contact-section .btn-primary:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+}
+
+.contact-section .btn-primary:active {
+    background-color: #004085;
+    /* درجة أغمق عند الضغط */
+    transform: scale(0.98);
+}
+
+.contact-section .btn-primary:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+/* Form Fade-in Animation */
+@keyframes formFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Contact Info Styling */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    /* جعل العناصر تحت بعضها */
+    justify-content: center;
+    margin-top: 20px;
+    gap: 20px;
+    /* المسافة بين الروابط */
+}
+
+/* Contact Info Item Styling */
+.contact-info-item {
+    display: block;
+    padding: 12px 20px;
+    background-color: transparent;
+    /* بدون خلفية */
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    max-width: 350px;
+    /* تحديد العرض الأقصى */
+    margin: 0 auto;
+}
+
+.contact-info-item:hover {
+    color: #007bff;
+    /* تغيير اللون عند التمرير */
+}
+
+.contact-info-item:active {
+    color: #004085;
+    /* درجة أغمق عند الضغط */
+}
+
+.contact-info-item:disabled {
+    color: #cccccc;
+    cursor: not-allowed;
+}

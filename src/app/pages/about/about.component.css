@@ -1,0 +1,131 @@
+/* تأثيرات الحركة */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* تأثير تغيير الألوان في الخلفية */
+@keyframes colorChange {
+    0% {
+        background: linear-gradient(135deg, #6a11cb, #2575fc);
+    }
+
+    25% {
+        background: linear-gradient(135deg, #6fff5f, #7bfec7);
+    }
+
+    50% {
+        background: linear-gradient(135deg, #00c6ff, #0072ff);
+    }
+
+    75% {
+        background: linear-gradient(135deg, #00b4db, #0083b0);
+    }
+
+    100% {
+        background: linear-gradient(135deg, #6a11cb, #2575fc);
+    }
+}
+
+/* تصميم الخلفية المتدرجة مع الحركة */
+.about {
+    padding: 40px;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    background-size: 400% 400%;
+    animation: waveAnimation 15s ease infinite, colorChange 10s ease infinite;
+    color: rgb(236, 231, 231);
+    position: relative;
+}
+
+/* تموجات إضافية على الخلفية */
+.about::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('https://www.transparenttextures.com/patterns/zig-zag.png');
+    opacity: 0.2;
+    z-index: 0;
+}
+
+/* تنسيق المحتوى داخل الـ section */
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.3);
+    /* خلفية رمادية خفيفة */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* إضافة تأثير الحركة على العناصر */
+.about h2,
+.about p,
+.about h3,
+.about ul,
+.cta-button {
+    animation: fadeInUp 1.5s ease-in-out forwards;
+    opacity: 0;
+}
+
+.about h2 {
+    animation-delay: 0.2s;
+}
+
+.about p {
+    animation-delay: 0.4s;
+}
+
+.about h3 {
+    animation-delay: 0.6s;
+}
+
+.about ul {
+    animation-delay: 0.8s;
+}
+
+.cta-button {
+    animation-delay: 1s;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    animation: colorChangeButton 10s ease infinite;
+}
+
+/* تأثير تغيير ألوان الزر عند التمرير */
+@keyframes colorChangeButton {
+    0% {
+        background-color: #007bff;
+    }
+
+    50% {
+        background-color: #ff7e5f;
+    }
+
+    100% {
+        background-color: #007bff;
+    }
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+}
+.a{
+    color:rgba(0, 0, 0, 0.785);}

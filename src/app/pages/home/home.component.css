@@ -1,0 +1,72 @@
+/* إضافة الخلفية الجميلة */
+.home {
+    background: linear-gradient(45deg, #00bcd4, #ff4081);
+    /* خلفية تدرج لوني */
+    background-size: 400% 400%;
+    animation: gradientBackground 10s ease infinite;
+    /* تحريك الخلفية */
+    height: 100vh;
+    /* جعل الارتفاع يغطي كامل الشاشة */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* أنيميشن لتحريك الخلفية */
+@keyframes gradientBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* تأثير الانزلاق للنصوص */
+.home-content {
+    animation: slideIn 1s ease-out forwards;
+    /* أنيميشن النصوص */
+    opacity: 0;
+    /* البداية مع عدم الشفافية */
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(-30px);
+        /* بداية النصوص من الأعلى */
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        /* إرجاع النصوص للمكان الطبيعي */
+        opacity: 1;
+    }
+}
+
+/* تنسيق الأزرار */
+.cta-button {
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #333;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #00bcd4;
+    /* تغيير اللون عند التمرير */
+    transform: scale(1.1);
+    /* تكبير الحجم عند التمرير */
+}
